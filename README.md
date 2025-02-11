@@ -127,14 +127,14 @@ Mapping is performed, where each word in the chunk is split and mapped to the nu
 The reducer is called, which takes each key-value pair, and performs summation over the keys. This provides us with a corresponding word-count pair.
 ## Execution:
 How to build and run the project:
-0. Build the Project: `mvn install`
-0. Move the jar into the shared folder: `mv target/WordCountUsingHadoop-0.0.1-SHAPSHOT.jar shared-folder/input/code`
-0. Copy the jar into the container: `docker cp shared-folder/input/code/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
-0. Copy the input files into the container.
-0. Inside the container, create an input directory: `hadoop fs -mkdir -p /input/dataset`
-0. Copy input data from container to hdfs: `hadoop fs -put ./input.txt /input/dataset/`
-0. Run the Job: `hadoop har WordCountUsingHadoop-0.0.1-SNAPSHOT.jar com.example.controller.Controller /input/dataset/input.txt /output`
-0. Output will be in the hdfs /output directory.
+1. Build the Project: `mvn install`
+1. Move the jar into the shared folder: `mv target/WordCountUsingHadoop-0.0.1-SHAPSHOT.jar shared-folder/input/code`
+1. Copy the jar into the container: `docker cp shared-folder/input/code/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
+1. Copy the input files into the container.
+1. Inside the container, create an input directory: `hadoop fs -mkdir -p /input/dataset`
+1. Copy input data from container to hdfs: `hadoop fs -put ./input.txt /input/dataset/`
+1. Run the Job: `hadoop har WordCountUsingHadoop-0.0.1-SNAPSHOT.jar com.example.controller.Controller /input/dataset/input.txt /output`
+1. Output will be in the hdfs /output directory.
 ## Challenges:
 The biggest difficulty in this assignment is understanding the flow of execution in mapreduce.
 There isnt much good documentation on this process, and it is not easy to step through and debug.
