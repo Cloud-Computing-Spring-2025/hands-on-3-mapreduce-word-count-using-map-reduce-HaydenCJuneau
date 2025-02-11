@@ -155,3 +155,6 @@ example 2
 very 1
 helpful 1
 ```
+
+Additionally, there are preprocessed samples in the `shared-folder/output`. 
+My additional dataset is a text version of the script from the "shrek" film.
